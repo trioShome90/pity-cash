@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use JeroenNoten\LaravelAdminLte\Http\Controllers\DarkModeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +15,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('dashboard');
+});
+
+Route::get('pemasukan', function() { 
+    return view('slidebar.pemasukan');
+    
+});
+Route::get('pengeluaran', function() { 
+    return view('slidebar.pengeluaran');
+});
+Route::get('daftarbelanja', function() { 
+    return view('slidebar.daftarbelanja');
+});
+Route::get('tables', function() { 
+    return view('slidebar.tables');
 });
